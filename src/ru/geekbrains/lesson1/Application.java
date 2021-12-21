@@ -1,5 +1,6 @@
 package ru.geekbrains.lesson1;
 
+import javafx.stage.Stage;
 import ru.geekbrains.lesson1.animal.Cat;
 import ru.geekbrains.lesson1.animal.Dog;
 import ru.geekbrains.lesson1.animal.Human;
@@ -13,7 +14,7 @@ import ru.geekbrains.lesson1.enums.Color;
 /**
  * Класс для запуска приложения - симулятор кросса
  */
-public class Application {
+public abstract class Application {
 
     public static void main(String[] args) {
         Team team = new Team(
@@ -36,4 +37,5 @@ public class Application {
         team.showResults();
     }
 
+    public abstract void start (Stage primaryStage);
 }
