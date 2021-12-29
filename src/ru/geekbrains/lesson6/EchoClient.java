@@ -1,0 +1,19 @@
+package ru.geekbrains.lesson6;
+
+;
+import java.io.IOException;
+import java.net.Socket;
+
+
+public class EchoClient {
+    public static void main(String[] args){
+        try {
+            Socket socket = new Socket("Localhost", 7777);
+            SocketHandler socketHandler = new SocketHandler(socket);
+            socketHandler.start();
+            socketHandler.join();
+        }  catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
